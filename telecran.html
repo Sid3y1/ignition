@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+</head>
+
+<body id="page-top" class="index">
+    <section id="telecran">
+        <div class="container">
+            <div class="row">
+                    <p>
+                        Hold your click while drawing, you have only one chance!
+                    </p>
+                    <table>
+                        <tr>
+                            <td width="550">
+                                <div  style="border:1px blue solid" id="canvasContainer"></div>
+                            </td>
+                            <td align="bottom">                            
+                                <div id="actions_telecran">
+                                    <a id="erase_telecran" href="#simple_sketch" data-tool="eraser" class="btn btn-danger btn-m">Clear</a>
+                                    <br />
+                                    <a id="send_telecran" href="#simple_sketch" data-tool="sender" class="btn btn-success btn-m">I love it</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+<!--
+            <div class="row">
+                    <iframe width="650" height="490" src="http://172.16.0.113:8081/"></iframe>
+            </div>
+    -->    </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/sketch.js"></script>
+
+    <script>
+    $( document ).ready(function() {
+
+        $(function() {
+            initCanvas();
+        });
+
+    });
+
+    function initCanvas() {
+        $('#canvasContainer').html('').append('<canvas id="simple_sketch" width="550" height="350" class="active"></canvas>');
+        $('#simple_sketch').sketch();
+    }
+              
+    </script>
+
+</body>
+
+</html>
